@@ -1,0 +1,7 @@
+#Klassisk version, olika versioner har olika egenskaper. Förmodligen så har nyare versioner nyare/mer features.
+version: 'version'
+#En service är i princip en container, under services kan det vara flertalet containar/listobjekt
+services:
+
+# Nätverkskonf mellan containrar.
+networks:
