@@ -2,3 +2,15 @@
 # Syftet är att se alla möjliga tänkbara keys.
 # En hemsida med massa samples för att lära sig : https://github.com/docker/awesome-compose
 
+# version: '' Denna är inte längre ett krav.
+
+
+services: 
+  html:
+    build:
+      dockerfile: Dockerfile
+    ports: 
+      - "521:80" # DEn till höger Värdporten är och den till vänster är kontainerportden
+  html2: 
+    build: 
+      dockerfile: dolche
