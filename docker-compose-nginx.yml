@@ -1,0 +1,14 @@
+version: '3'
+services:
+  nginx:
+    image: nginx
+    ports:
+    - 8081:80
+    volumes:
+    - nginx-index:/usr/share/nginx/html
+volumes:
+  nginx-index:
+    driver: local
+
+  
+  
