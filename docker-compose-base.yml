@@ -1,7 +1,19 @@
-#Klassisk version, olika versioner har olika egenskaper. Förmodligen så har nyare versioner nyare/mer features.
-version: 'version'
-#En service är i princip en container, under services kan det vara flertalet containar/listobjekt
-services:
+version: '3' 
+services: # under service så deklarrerar man antal containrar
+  nginx: # här börjar en kontainer
+    image: nginx  #Image från hub.docker.com kan ta egna images från docker hub "peasod/private:sankaskepp"
+    ports:  # deklarera vilka portar på localhosten som ska vara öppna på kontianern localhostport:containerport
+    - 8081:80
+    volumes: # Detta sparar förljande ifrån kontainern till en lokal fil på datorn "Pekning på volymen nedan:Path i kontainern" 
+    - nginx-index:/usr/share/nginx/html
+volumes:  #Volym som kontainrar ska referera till.
+  nginx-index: #Namn på volym
+    driver: local # vart volymen ska sparas.
 
-# Nätverkskonf mellan containrar.
-networks:
+  # Här finns alla docker-compose commandon.
+  # https://docs.docker.com/compose/compose-file/compose-file-v3/#volume-configuration-reference
+
+  #har man en .env fil i samma mapp som man har en docker-composefil. så kan man använda de variablerna med "${variablenamn_från_.env}"
+  # exempel image:${imagenamn}
+
+  #Variablerna i en .env fil ska vara spara enlig följande syntax. "variabelnamn=värde"

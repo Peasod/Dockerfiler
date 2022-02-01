@@ -1,0 +1,13 @@
+# Korrekt syntax. Märkligt nog fungerar både variabel syntaxerna, den senare är rekommenderad dock.
+
+version: '3'
+services:
+  nginx:
+    image: nginx:latest
+    ports:
+    - $port:80
+    volumes:
+    - vol1:${indexhtlmpath}
+volumes:
+  vol1:
+

@@ -1,10 +1,6 @@
 # Detta är en template för en docker compose.
 # Syftet är att se alla möjliga tänkbara keys.
 # En hemsida med massa samples för att lära sig : https://github.com/docker/awesome-compose
-
-# version: '' Denna är inte längre ett krav.
-
-
 services: 
   html:
     build:
