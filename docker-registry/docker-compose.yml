@@ -1,0 +1,8 @@
+version: '3'
+services:
+  registry:
+    image: registry:2
+    ports:
+      - 5000:5000
+
+#Denna skapar ett eget repo, men bara för localhost. Så krävs mer konfig för att vara kompatibelt med kubernetes.
